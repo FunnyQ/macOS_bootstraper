@@ -1,6 +1,6 @@
 #!/bin/sh
 
-macOS_bootstrap="$(cd "$(dirname "$0")/.." && pwd -P)"
+macOS_bootstrap="$(pwd -P)"
 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 # export RBENV_ROOT=/usr/local/var/rbenv
@@ -73,7 +73,7 @@ fi
 
 info_echo "Install Brew formalue"
 brew tap "Homebrew/bundle" 2> /dev/null
-brew bundle --file="$macOS_bootstrap/Brewfile"
+brew bundle --file="./Brewfile"
 
 # https://github.com/eventmachine/eventmachine/issues/602#issuecomment-152184551
 info_echo "Link keg-only openssl to /usr/local to let software outside of Homebrew to find it"
