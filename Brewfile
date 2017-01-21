@@ -7,7 +7,8 @@
 
 # Essential terminal utilities
 tap 'homebrew/services'
-brew 'apple-gcc42'
+tap 'homebrew/dupes'
+# brew 'apple-gcc42'
 brew 'git'
 brew 'hub'
 brew 'postgresql'
@@ -59,6 +60,7 @@ cask 'pgadmin4'
 cask 'psequel'
 cask 'transmission'
 cask 'sequel-pro'
+cask 'atext'
 
 # Node version manager
 brew 'nvm'
