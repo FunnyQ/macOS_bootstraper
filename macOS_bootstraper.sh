@@ -105,7 +105,7 @@ echo "tmuxinator" >> "$(brew --prefix rbenv)/default-gems"
 echo "rails" >> "$(brew --prefix rbenv)/default-gems"
 echo "powder" >> "$(brew --prefix rbenv)/default-gems"
 
-ruby_version="2.4.0"
+ruby_version="2.4.2"
 
 if test -z "$(rbenv versions --bare|grep $ruby_version)"; then
   info_echo "Install Ruby $ruby_version"
