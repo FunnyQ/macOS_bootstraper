@@ -32,7 +32,7 @@ catch_exit() {
 # Check macOS version
 # ====================
 
-required_osx_version="10.11.0"
+required_osx_version="10.14.0"
 osx_version=$(/usr/bin/sw_vers -productVersion)
 
 info_echo "Checking OS X version"
@@ -105,7 +105,7 @@ echo "tmuxinator" >> "$(brew --prefix rbenv)/default-gems"
 echo "rails" >> "$(brew --prefix rbenv)/default-gems"
 echo "powder" >> "$(brew --prefix rbenv)/default-gems"
 
-ruby_version="2.4.2"
+ruby_version="2.5.1"
 
 if test -z "$(rbenv versions --bare|grep $ruby_version)"; then
   info_echo "Install Ruby $ruby_version"
@@ -131,22 +131,16 @@ source "$(brew --prefix nvm)/nvm.sh"
 set -e
 
 if test -z "$(nvm ls|grep "node")"; then
-  info_echo "Install latest Node.js version"
-  nvm install node
+  info_echo "Install Node.js LTS version"
+  nvm install --lts
 fi
 
 info_echo "Set latest Node.js version as global default Node"
-nvm use node
-nvm alias default node
+nvm use --lts
+# nvm alias default --lts
 
 export npm_config_global=true
 export npm_config_loglevel=silent
-
-info_echo "Install Bower"
-npm install bower
-
-info_echo "Install Ember-cli"
-npm install ember-cli
 
 # ====================
 # restore from mackup
