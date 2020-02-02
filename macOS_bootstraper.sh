@@ -32,7 +32,7 @@ catch_exit() {
 # Check macOS version
 # ====================
 
-required_osx_version="10.14.0"
+required_osx_version="10.15.0"
 osx_version=$(/usr/bin/sw_vers -productVersion)
 
 info_echo "Checking OS X version"
@@ -52,12 +52,12 @@ sudo softwareupdate -i -a
 # setting up ssh
 # ====================
 
-info_echo "Checking for SSH key, generating one if it doesn't exist"
-[[ -f ~/.ssh/id_rsa.pub ]] || ssh-keygen -t rsa
+# info_echo "Checking for SSH key, generating one if it doesn't exist"
+# [[ -f ~/.ssh/id_rsa.pub ]] || ssh-keygen -t rsa
 
-info_echo "Copying public key to clipboard. Paste it into your Github account"
-[[ -f ~/.ssh/id_rsa.pub ]] && pbcopy < ~/.ssh/id_rsa.pub
-open https://github.com/account/ssh
+# info_echo "Copying public key to clipboard. Paste it into your Github account"
+# [[ -f ~/.ssh/id_rsa.pub ]] && pbcopy < ~/.ssh/id_rsa.pub
+# open https://github.com/account/ssh
 
 # ====================
 # install brew and apps
