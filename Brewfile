@@ -6,25 +6,26 @@
 #  NVM_DIR=/usr/local/var/nvm
 
 # Essential terminal utilities
-tap "caskroom/cask"
-tap "caskroom/fonts"
-tap "caskroom/versions"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
 tap "homebrew/bundle"
 tap "homebrew/core"
-# tap "homebrew/dupes" TODO: dupes.
 tap "homebrew/services"
 tap "jonof/kenutils"
+tap "heroku/brew"
+tap "puma/puma"
 
 brew "advancecomp"
 brew "ansible"
-# brew "apple-gcc42" TODO: not go for 10.14
 brew "autoconf"
-brew "curl", args: ["with-openssl"]
+brew "curl-openssl"
 brew "emojify"
 brew "geckodriver"
 brew "gifsicle"
 brew "git"
 brew "gnupg"
+brew "pinentry-mac"
 brew "graphviz"
 brew "heroku"
 brew "htop"
@@ -62,41 +63,48 @@ brew "zsh"
 brew "zsh-completions"
 
 # Essential Mac applications
+# --- BASIC TOOLS ---
 cask "alfred"
-# cask "amazon-drive" # TODO: something wrong
-cask "calibre"
-cask "caskroom/fonts/font-fira-code"
-cask "caskroom/fonts/font-source-code-pro-for-powerline"
-cask "clyang-welly"
-cask "docker"
-cask "dropbox"
-cask "firefox"
-cask "font-hack-nerd-font"
-cask "gitup"
-cask "google-chrome"
-cask "imageoptim"
-cask "insomnia"
 cask "iterm2"
+cask "dropbox"
 cask "karabiner-elements"
 cask "keka"
 cask "keybase"
 cask "ngrok"
-cask "psequel"
-# cask "rdm" # TODO: no longer available
-cask "resilio-sync"
 cask "sequel-pro"
-cask "sigil"
-cask "slack"
-cask "spectacle"
-cask "spotify"
-cask "subler"
-cask "transmission"
+cask "psequel"
+cask "resilio-sync"
+cask "flux"
+# --- FONTS ---
+cask "font-fira-code"
+cask "font-source-code-pro-for-powerline"
+cask "font-hack-nerd-font"
+# --- BROWSERS ---
+cask "google-chrome"
+cask "firefox"
+cask "welly"
+cask "docker"
+# --- Dev TOOLS ---
+cask "visual-studio-code"
+cask "fork"
+cask "imageoptim"
+cask "insomnia"
+cask "postman"
 cask "vagrant"
 cask "vagrant-manager"
 cask "virtualbox" # something wrong with promission
-cask "visual-studio-code"
 cask "xquartz"
-cask "zeplin"
+cask "sketch"
+# --- Communication ---
+cask "slack"
+# --- Applications ---
+cask "calibre"           # e-books
+cask "sigil"             # e-books
+cask "spotify"
+cask "subler"
+cask "transmission"
+cask "geotag-photos-pro"
+cask "openemu"
 
 # Node version manager
 brew 'nvm'
@@ -105,3 +113,4 @@ brew 'nvm'
 brew "rbenv"
 brew 'ruby-build'
 brew 'rbenv-default-gems'
+brew "puma-dev"

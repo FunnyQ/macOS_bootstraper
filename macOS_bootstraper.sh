@@ -32,7 +32,7 @@ catch_exit() {
 # Check macOS version
 # ====================
 
-required_osx_version="10.14.0"
+required_osx_version="10.15.0"
 osx_version=$(/usr/bin/sw_vers -productVersion)
 
 info_echo "Checking OS X version"
@@ -52,12 +52,12 @@ sudo softwareupdate -i -a
 # setting up ssh
 # ====================
 
-info_echo "Checking for SSH key, generating one if it doesn't exist"
-[[ -f ~/.ssh/id_rsa.pub ]] || ssh-keygen -t rsa
+# info_echo "Checking for SSH key, generating one if it doesn't exist"
+# [[ -f ~/.ssh/id_rsa.pub ]] || ssh-keygen -t rsa
 
-info_echo "Copying public key to clipboard. Paste it into your Github account"
-[[ -f ~/.ssh/id_rsa.pub ]] && pbcopy < ~/.ssh/id_rsa.pub
-open https://github.com/account/ssh
+# info_echo "Copying public key to clipboard. Paste it into your Github account"
+# [[ -f ~/.ssh/id_rsa.pub ]] && pbcopy < ~/.ssh/id_rsa.pub
+# open https://github.com/account/ssh
 
 # ====================
 # install brew and apps
@@ -267,7 +267,7 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 # Disable Spotlight indexing for any volume that gets mounted and has not yet
 # been indexed before.
 # Use `sudo mdutil -i off "/Volumes/foo"` to stop indexing any volume.
-sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
+# sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
 
 # Change indexing order and disable some file types
 defaults write com.apple.spotlight orderedItems -array \
