@@ -6,19 +6,20 @@
 #  NVM_DIR=/usr/local/var/nvm
 
 # Essential terminal utilities
-tap "caskroom/cask"
-tap "caskroom/fonts"
-tap "caskroom/versions"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
 tap "homebrew/bundle"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "jonof/kenutils"
+tap "heroku/brew"
 tap "puma/puma"
 
 brew "advancecomp"
 brew "ansible"
 brew "autoconf"
-brew "curl", args: ["with-openssl"]
+brew "curl-openssl"
 brew "emojify"
 brew "geckodriver"
 brew "gifsicle"
@@ -75,13 +76,13 @@ cask "psequel"
 cask "resilio-sync"
 cask "flux"
 # --- FONTS ---
-cask "caskroom/fonts/font-fira-code"
-cask "caskroom/fonts/font-source-code-pro-for-powerline"
+cask "font-fira-code"
+cask "font-source-code-pro-for-powerline"
 cask "font-hack-nerd-font"
 # --- BROWSERS ---
 cask "google-chrome"
 cask "firefox"
-cask "clyang-welly"
+cask "welly"
 cask "docker"
 # --- Dev TOOLS ---
 cask "visual-studio-code"
@@ -103,7 +104,6 @@ cask "spotify"
 cask "subler"
 cask "transmission"
 cask "geotag-photos-pro"
-cask "sony-ps4-remote-play"
 cask "openemu"
 
 # Node version manager

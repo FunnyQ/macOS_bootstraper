@@ -267,7 +267,7 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 # Disable Spotlight indexing for any volume that gets mounted and has not yet
 # been indexed before.
 # Use `sudo mdutil -i off "/Volumes/foo"` to stop indexing any volume.
-sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
+# sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
 
 # Change indexing order and disable some file types
 defaults write com.apple.spotlight orderedItems -array \
